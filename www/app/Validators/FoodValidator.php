@@ -6,11 +6,11 @@ use \Prettus\Validator\Contracts\ValidatorInterface;
 use \Prettus\Validator\LaravelValidator;
 
 /**
- * Class DistancesValidator.
+ * Class FoodValidator.
  *
  * @package namespace App\Validators;
  */
-class DistancesValidator extends LaravelValidator
+class FoodValidator extends LaravelValidator
 {
     /**
      * Validation Rules
@@ -18,7 +18,7 @@ class DistancesValidator extends LaravelValidator
      * @var array
      */
     protected $rules = [
-        ValidatorInterface::RULE_CREATE => [],
+        ValidatorInterface::RULE_CREATE => ['food' => 'required'],
         ValidatorInterface::RULE_UPDATE => [],
     ];
 }

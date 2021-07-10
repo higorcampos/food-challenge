@@ -7,11 +7,11 @@ use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
 /**
- * Class Distances.
+ * Class Food.
  *
  * @package namespace App\Entities;
  */
-class Distances extends Model implements Transformable
+class Food extends Model implements Transformable
 {
     use TransformableTrait;
 
@@ -20,10 +20,6 @@ class Distances extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [
-        'postcode_origin',
-        'postcode_destiny',
-        'calculated_distance'
-    ];
+    protected $fillable = ['food'];
 
 }

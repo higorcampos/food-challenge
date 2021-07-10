@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DistancesController;
+use App\Http\Controllers\FoodController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +14,4 @@ use App\Http\Controllers\DistancesController;
 |
 */
 
-Route::get('/', [DistancesController::class, 'index']);
-Route::resource('distances', DistancesController::class)->except([
-    'destroy','update'
-]);
-Route::get('distances/{distance}/delete', [DistancesController::class, 'destroy'])->name('distances.destroy');
-Route::post('distances/{distance}/update', [DistancesController::class, 'update'])->name('distances.update');
+Route::get('/', [FoodController::class, 'show_page']);

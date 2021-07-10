@@ -24,6 +24,7 @@ class RepositoryServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->bind(\App\Repositories\DistancesRepository::class, \App\Repositories\DistancesRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\FoodRepository::class, \App\Repositories\FoodRepositoryEloquent::class);
         //:end-bindings:
     }
 }

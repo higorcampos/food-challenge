@@ -4,9 +4,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 /**
- * Class CreateDistancesTable.
+ * Class CreateFoodTable.
  */
-class CreateDistancesTable extends Migration
+class CreateFoodTable extends Migration
 {
 	/**
 	 * Run the migrations.
@@ -15,11 +15,9 @@ class CreateDistancesTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('distances', function(Blueprint $table) {
+		Schema::create('food', function(Blueprint $table) {
             $table->increments('id');
-			$table->string('postcode_origin')->nullable();
-			$table->string('postcode_destiny')->nullable();
-			$table->longText('calculated_distance')->nullable();
+			$table->string('food');
             $table->timestamps();
 		});
 	}
@@ -31,6 +29,6 @@ class CreateDistancesTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('distances');
+		Schema::drop('food');
 	}
 }
