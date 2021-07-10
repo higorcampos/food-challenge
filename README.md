@@ -1,6 +1,9 @@
 # Food Challenge
  - what but i like to eat
 
+# Demo
+- http://food.hctech.digital
+
 # Infrastructure
  - Server Nginx
  - Docker
